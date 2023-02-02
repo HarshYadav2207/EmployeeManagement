@@ -1,0 +1,33 @@
+﻿@model List<Employee>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<table class="table bg-dark">
+  <thead>
+    <tr>
+      <th scope="col" class="text-white">Id</th>
+            <th scope="col" class="text-white">Name</th>
+            <th scope="col" class="text-white">Department Id</th>
+            <th scope="col" class="text-white">Salary</th>
+            <th scope="col" class="text-white">Designation</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+   @foreach(var employee in Model)
+        {
+            <tr>
+                <td class ="text-white">@employee.Id</td>
+                <td class="text-white">@employee.Name</td>
+                <td class="text-white">@employee.DepartmentId</td>
+                <td class="text-white">@employee.salary</td>
+                <td class="text-white">@employee.designation</td>
+                <td class="text-white"><a href="Employee/View/@employee.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
